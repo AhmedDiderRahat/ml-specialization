@@ -1,7 +1,7 @@
 # Optional Lab: Gradient Descent for Linear Regression
 
 <figure>
-    <center> <img src="./images/C1_W1_L4_S1_Lecture_GD.png"  style="width:800px;height:200px;" ></center>
+    <center> <img src="../resources/images/C1_W1_L4_S1_Lecture_GD.png"  style="width:800px;height:200px;" ></center>
 </figure>
 
 ## Goals
@@ -136,7 +136,9 @@ def compute_gradient(x, y, w, b):
 
 <br/>
 
-<img align="left" src="./images/C1_W1_Lab03_lecture_slopes.PNG"   style="width:340px;" > The lectures described how gradient descent utilizes the partial derivative of the cost with respect to a parameter at a point to update that parameter.   
+<img align="left" src="../resources/images/C1_W1_Lab03_lecture_slopes.PNG"   style="width:340px;" > 
+
+The lectures described how gradient descent utilizes the partial derivative of the cost with respect to a parameter at a point to update that parameter.   
 Let's use our `compute_gradient` function to find and plot some partial derivatives of our cost function relative to one of the parameters, $w_0$.
 
 
@@ -236,7 +238,7 @@ print(f"(w,b) found by gradient descent: ({w_final:8.4f},{b_final:8.4f})")
     (w,b) found by gradient descent: (199.9929,100.0116)
 
 
-<img align="left" src="./images/C1_W1_Lab03_lecture_learningrate.PNG"  style="width:340px; padding: 15px; " > 
+<img align="left" src="../resources/images/C1_W1_Lab03_lecture_learningrate.PNG"  style="width:340px; padding: 15px; " > 
 Take a moment and note some characteristics of the gradient descent process printed above.  
 
 - The cost starts large and rapidly declines as described in the slide from the lecture.
@@ -312,8 +314,9 @@ plt_contour_wgrad(x_train, y_train, p_hist, ax, w_range=[180, 220, 0.5], b_range
 ### Increased Learning Rate
 
 <figure>
- <img align="left", src="./images/C1_W1_Lab03_alpha_too_big.PNG"   style="width:340px;height:240px;" >
+ <img align="left", src="../resources/images/C1_W1_Lab03_alpha_too_big.PNG"   style="width:340px;height:240px;" >
 </figure>
+
 In the lecture, there was a discussion related to the proper value of the learning rate, $\alpha$ in equation(3). The larger $\alpha$ is, the faster gradient descent will converge to a solution. But, if it is too large, gradient descent will diverge. Above you have an example of a solution which converges nicely.
 
 Let's try increasing the value of  $\alpha$ and see what happens:
