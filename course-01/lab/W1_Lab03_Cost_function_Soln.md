@@ -103,6 +103,7 @@ The cost equation (1) above shows that if $w$ and $b$ can be selected such that 
 
 In the previous lab, you determined that $b=100$ provided an optimal solution so let's set $b$ to 100 and focus on $w$.
 
+
 <br/>
 Below, use the slider control to select the value of $w$ that minimizes cost. It can take a few seconds for the plot to update.
 
