@@ -230,10 +230,7 @@ On the left, you see that cost is decreasing as it should. On the right, you can
 The lectures described the importance of rescaling the dataset so the features have a similar range.
 If you are interested in the details of why this is the case, click on the 'details' header below. If not, the section below will walk through an implementation of how to do feature scaling.
 
-<details>
-<summary>
-    <font size='3', color='darkgreen'><b>Details</b></font>
-</summary>
+### Details
 
 Let's look again at the situation with $\alpha$ = 9e-7. This is pretty close to the maximum value we can set $\alpha$  to without diverging. This is a short run showing the first few iterations:
 
