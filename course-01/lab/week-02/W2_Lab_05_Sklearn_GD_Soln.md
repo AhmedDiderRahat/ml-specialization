@@ -123,7 +123,7 @@ plt.show()
 ```
 
 
-![png](output_17_0.png)
+![png](output_17_1.png)
 
 
 ## Congratulations!
