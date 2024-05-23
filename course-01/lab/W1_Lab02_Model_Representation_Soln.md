@@ -5,10 +5,12 @@
 </figure>
 
 ## Goals
+
 In this lab you will:
 - Learn to implement the model $f_{w,b}$ for linear regression with one variable
 
 ## Notation
+
 Here is a summary of some of the notation you will encounter.  
 
 |General <img width=70/> <br />  Notation  <img width=70/> | Description<img width=350/>| Python (if applicable) |
