@@ -1,6 +1,7 @@
 # Optional Lab: Feature Engineering and Polynomial Regression
 
-![](./images/C1_W2_Lab07_FeatureEngLecture.PNG)
+
+<img align="center" src="../../resources/images/C1_W2_Lab07_FeatureEngLecture.PNG" style="width:440px;height:90px"> 
 
 
 ## Goals
