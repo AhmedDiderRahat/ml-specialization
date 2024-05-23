@@ -1,7 +1,7 @@
 # Optional Lab: Model Representation
 
 <figure>
- <img src="../resources/images/C1_W1_L3_S1_Lecture_b.png"   style="width:600px;height:200px;">
+ <img src="../../resources/images/C1_W1_L3_S1_Lecture_b.png"   style="width:600px;height:200px;">
 </figure>
 
 ## Goals
@@ -40,7 +40,7 @@ plt.style.use('./deeplearning.mplstyle')
 ```
 
 # Problem Statement
-<img align="left" src="../resources/images/C1_W1_L3_S1_trainingdata.png"    style=" width:380px; padding: 10px;  " /> 
+<img align="left" src="../../resources/images/C1_W1_L3_S1_trainingdata.png"    style=" width:380px; padding: 10px;  " /> 
 
 As in the lecture, you will use the motivating example of housing price prediction.  
 This lab will use a simple data set with only two data points - a house with 1000 square feet(sqft) sold for \\$300,000 and a house with 2000 square feet sold for \\$500,000. These two points will constitute our *data or training set*. In this lab, the units of size are 1000 sqft and the units of price are 1000s of dollars.
@@ -143,7 +143,7 @@ plt.show()
 
 ## Model function
 
-<img align="left" src="../resources/images/C1_W1_L3_S1_model.png"     style=" width:380px; padding: 10px; " > As described in lecture, the model function for linear regression (which is a function that maps from `x` to `y`) is represented as 
+<img align="left" src="../../resources/images/C1_W1_L3_S1_model.png"     style=" width:380px; padding: 10px; " > As described in lecture, the model function for linear regression (which is a function that maps from `x` to `y`) is represented as 
 
 $$ f_{w,b}(x^{(i)}) = wx^{(i)} + b \tag{1}$$
 
