@@ -43,7 +43,7 @@ Python is the programming language we will be using in this course. It has a set
 # 3 Vectors
 <a name="toc_40015_3.1"></a>
 ## 3.1 Abstract
-<img align="right" src="./images/C1_W2_Lab04_Vectors.PNG" style="width:340px;" >Vectors, as you will use them in this course, are ordered arrays of numbers. In notation, vectors are denoted with lower case bold letters such as $\mathbf{x}$.  The elements of a vector are all the same type. A vector does not, for example, contain both characters and numbers. The number of elements in the array is often referred to as the *dimension* though mathematicians may prefer *rank*. The vector shown has a dimension of $n$. The elements of a vector can be referenced with an index. In math settings, indexes typically run from 1 to n. In computer science and these labs, indexing will typically run from 0 to n-1.  In notation, elements of a vector, when referenced individually will indicate the index in a subscript, for example, the $0^{th}$ element, of the vector $\mathbf{x}$ is $x_0$. Note, the x is not bold in this case.  
+<img align="right" src="../resources/images/C1_W2_Lab04_Vectors.PNG" style="width:340px;" >Vectors, as you will use them in this course, are ordered arrays of numbers. In notation, vectors are denoted with lower case bold letters such as $\mathbf{x}$.  The elements of a vector are all the same type. A vector does not, for example, contain both characters and numbers. The number of elements in the array is often referred to as the *dimension* though mathematicians may prefer *rank*. The vector shown has a dimension of $n$. The elements of a vector can be referenced with an index. In math settings, indexes typically run from 1 to n. In computer science and these labs, indexing will typically run from 0 to n-1.  In notation, elements of a vector, when referenced individually will indicate the index in a subscript, for example, the $0^{th}$ element, of the vector $\mathbf{x}$ is $x_0$. Note, the x is not bold in this case.  
 
 
 <a name="toc_40015_3.2"></a>
@@ -254,7 +254,7 @@ print(f"b = 5 * a : {b}")
 ### 3.4.6 Vector Vector dot product
 The dot product is a mainstay of Linear Algebra and NumPy. This is an operation used extensively in this course and should be well understood. The dot product is shown below.
 
-<img src="./images/C1_W2_Lab04_dot_notrans.gif" width=800> 
+<img src="../resources/images/C1_W2_Lab04_dot_notrans.gif" width=800> 
 
 The dot product multiplies the values in two vectors element-wise and then sums the result.
 Vector dot product requires the dimensions of the two vectors to be the same. 
@@ -387,7 +387,7 @@ print(f"c has shape {c.shape}")
 ## 4.1 Abstract
 Matrices, are two dimensional arrays. The elements of a matrix are all of the same type. In notation, matrices are denoted with capitol, bold letter such as $\mathbf{X}$. In this and other labs, `m` is often the number of rows and `n` the number of columns. The elements of a matrix can be referenced with a two dimensional index. In math settings, numbers in the index typically run from 1 to n. In computer science and these labs, indexing will run from 0 to n-1.  
 <figure>
-    <center> <img src="./images/C1_W2_Lab04_Matrices.PNG"  alt='missing'  width=900><center/>
+    <center> <img src="../resources/images/C1_W2_Lab04_Matrices.PNG"  alt='missing'  width=900><center/>
     <figcaption> Generic Matrix Notation, 1st index is row, 2nd is column </figcaption>
 <figure/>
 
