@@ -1,6 +1,6 @@
 # Optional  Lab: Cost Function 
 <figure>
-    <center> <img src="../resources/images/C1_W1_L3_S2_Lecture_b.png"  style="width:1000px;height:200px;" ></center>
+    <center> <img src="../../resources/images/C1_W1_L3_S2_Lecture_b.png"  style="width:1000px;height:200px;" ></center>
 </figure>
 
 
@@ -94,7 +94,7 @@ def compute_cost(x, y, w, b):
 ## Cost Function Intuition
 
 <figure>
-    <center> <img src="../resources/images/C1_W1_Lab02_GoalOfRegression.PNG"  style=" width:380px; padding: 10px;  " ></center>
+    <center> <img src="../../resources/images/C1_W1_Lab02_GoalOfRegression.PNG"  style=" width:380px; padding: 10px;  " ></center>
 </figure> 
 
 Your goal is to find a model $f_{w,b}(x) = wx + b$, with parameters $w,b$,  which will accurately predict house values given an input $x$. The cost is a measure of how accurate the model is on the training data.
