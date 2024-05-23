@@ -238,7 +238,7 @@ print(f"(w,b) found by gradient descent: ({w_final:8.4f},{b_final:8.4f})")
     (w,b) found by gradient descent: (199.9929,100.0116)
 
 
-<img align="left" src="../resources/images/C1_W1_Lab03_lecture_learningrate.PNG"  style="width:340px; padding: 15px; " > 
+<img align="left" src="../../resources/images/C1_W1_Lab03_lecture_learningrate.PNG"  style="width:340px; padding: 15px; " > 
 Take a moment and note some characteristics of the gradient descent process printed above.  
 
 - The cost starts large and rapidly declines as described in the slide from the lecture.
@@ -314,7 +314,7 @@ plt_contour_wgrad(x_train, y_train, p_hist, ax, w_range=[180, 220, 0.5], b_range
 ### Increased Learning Rate
 
 <figure>
- <img align="left", src="../resources/images/C1_W1_Lab03_alpha_too_big.PNG"   style="width:340px;height:240px;" >
+ <img align="left", src="../../resources/images/C1_W1_Lab03_alpha_too_big.PNG"   style="width:340px;height:240px;" >
 </figure>
 
 In the lecture, there was a discussion related to the proper value of the learning rate, $\alpha$ in equation(3). The larger $\alpha$ is, the faster gradient descent will converge to a solution. But, if it is too large, gradient descent will diverge. Above you have an example of a solution which converges nicely.
