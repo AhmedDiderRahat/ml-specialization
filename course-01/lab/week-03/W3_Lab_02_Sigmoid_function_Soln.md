@@ -148,11 +148,9 @@ As you can see, the sigmoid function approaches  `0` as `z` goes to large negati
 ## Logistic Regression
 <img align="left" src="../../resources/images/C1_W3_LogisticRegression_right.png"     style=" width:300px; padding: 10px; " > A logistic regression model applies the sigmoid to the familiar linear regression model as shown below:
 
-$$ f_{\mathbf{w},b}(\mathbf{x}^{(i)}) = g(\mathbf{w} \cdot \mathbf{x}^{(i)} + b ) \tag{2} $$ 
-
-  where
-
-  $g(z) = \frac{1}{1+e^{-z}}\tag{3}$
+$\[ f_{\mathbf{w},b}(\mathbf{x}^{(i)}) = g(\mathbf{w} \cdot \mathbf{x}^{(i)} + b ) \tag{2} \]
+where \( g(z) = \frac{1}{1+e^{-z}} \tag{3} \)
+$
 
 
   
