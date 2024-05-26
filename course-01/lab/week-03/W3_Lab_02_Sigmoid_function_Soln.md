@@ -15,7 +15,10 @@ plt.style.use('./deeplearning.mplstyle')
 ```
 
 ## Sigmoid or Logistic Function
-<img align="left" src="../../resources/images/C1_W3_LogisticRegression_left.png"     style=" width:300px; padding: 10px; " >As discussed in the lecture videos, for a classification task, we can start by using our linear regression model, $f_{\mathbf{w},b}(\mathbf{x}^{(i)}) = \mathbf{w} \cdot  \mathbf{x}^{(i)} + b$, to predict $y$ given $x$. 
+
+<img align="left" src="../../resources/images/C1_W3_LogisticRegression_left.png"     style=" width:300px; padding: 10px; " >
+
+As discussed in the lecture videos, for a classification task, we can start by using our linear regression model, $f_{\mathbf{w},b}(\mathbf{x}^{(i)}) = \mathbf{w} \cdot  \mathbf{x}^{(i)} + b$, to predict $y$ given $x$. 
 - However, we would like the predictions of our classification model to be between 0 and 1 since our output variable $y$ is either 0 or 1. 
 - This can be accomplished by using a "sigmoid function" which maps all input values to values between 0 and 1. 
 
@@ -24,9 +27,9 @@ Let's implement the sigmoid function and see this for ourselves.
 
 ## Formula for Sigmoid function
 
-The formula for a sigmoid function is as follows -  
+The formula for a sigmoid function is as follows -
 
-$g(z) = \frac{1}{1+e^{-z}}\tag{1}$
+$g(z) = \frac{1}{1+e^{-z}}\tag{1}$ 
 
 In the case of logistic regression, z (the input to the sigmoid function), is the output of a linear regression model. 
 - In the case of a single example, $z$ is scalar.
@@ -146,7 +149,9 @@ As you can see, the sigmoid function approaches  `0` as `z` goes to large negati
 
 
 ## Logistic Regression
-<img align="left" src="../../resources/images/C1_W3_LogisticRegression_right.png"     style=" width:300px; padding: 10px; " > A logistic regression model applies the sigmoid to the familiar linear regression model as shown below:
+<img align="left" src="../../resources/images/C1_W3_LogisticRegression_right.png"     style=" width:300px; padding: 10px; " >
+
+ A logistic regression model applies the sigmoid to the familiar linear regression model as shown below:
 
 $\[ f_{\mathbf{w},b}(\mathbf{x}^{(i)}) = g(\mathbf{w} \cdot \mathbf{x}^{(i)} + b ) \tag{2} \]
 where \( g(z) = \frac{1}{1+e^{-z}} \tag{3} \)
