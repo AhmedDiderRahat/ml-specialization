@@ -15,7 +15,10 @@ plt.style.use('./deeplearning.mplstyle')
 ```
 
 ## Squared error for logistic regression?
-<img align="left" src="./images/C1_W3_SqErrorVsLogistic.png"     style=" width:400px; padding: 10px; " > Recall for **Linear** Regression we have used the **squared error cost function**:
+
+<img align="left" src="../../resources/images/C1_W3_SqErrorVsLogistic.png"     style=" width:400px; padding: 10px; " > <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+
+Recall for **Linear** Regression we have used the **squared error cost function**:
 The equation for the squared error cost with one variable is:
   $$J(w,b) = \frac{1}{2m} \sum\limits_{i = 0}^{m-1} (f_{w,b}(x^{(i)}) - y^{(i)})^2 \tag{1}$$ 
  
@@ -37,7 +40,6 @@ soup_bowl()
 This cost function worked well for linear regression, it is natural to consider it for logistic regression as well. However, as the slide above points out, $f_{wb}(x)$ now has a non-linear component, the sigmoid function:   $f_{w,b}(x^{(i)}) = sigmoid(wx^{(i)} + b )$.   Let's try a squared error cost on the example from an earlier lab, now including the sigmoid.
 
 Here is our training data:
-
 
 ```python
 x_train = np.array([0., 1, 2, 3, 4, 5],dtype=np.longdouble)
@@ -72,19 +74,22 @@ While this produces a pretty interesting plot, the surface above not nearly as s
 Logistic regression requires a cost function more suitable to its non-linear nature. This starts with a Loss function. This is described below.
 
 ## Logistic Loss Function
-<img align="left" src="./images/C1_W3_LogisticLoss_a.png"     style=" width:250px; padding: 2px; " >
-<img align="left" src="./images/C1_W3_LogisticLoss_b.png"     style=" width:250px; padding: 2px; " >
-<img align="left" src="./images/C1_W3_LogisticLoss_c.png"     style=" width:250px; padding: 2px; " > 
+<img align="left" src="../../resources/images/C1_W3_LogisticLoss_a.png" style=" width:250px; padding: 2px; " >
+<img align="left" src="../../resources/images/C1_W3_LogisticLoss_b.png" style=" width:250px; padding: 2px; " >
+<img align="left" src="../../resources/images/C1_W3_LogisticLoss_c.png" style=" width:250px; padding: 2px; " > 
 
 Logistic Regression uses a loss function more suited to the task of categorization where the target is 0 or 1 rather than any number. 
 
->**Definition Note:**   In this course, these definitions are used:  
+>**Definition Note:**   
+
+In this course, these definitions are used:  
 **Loss** is a measure of the difference of a single example to its target value while the  
 **Cost** is a measure of the losses over the training set
 
 
 This is defined: 
-* $loss(f_{\mathbf{w},b}(\mathbf{x}^{(i)}), y^{(i)})$ is the cost for a single data point, which is:
+* $loss(f_{\mathbf{w},b}(\mathbf{x}^{(i)}), y^{(i)})$ is the cost for a single data point, which is <br/><br/><br/>
+
 
 \begin{equation}
   loss(f_{\mathbf{w},b}(\mathbf{x}^{(i)}), y^{(i)}) = \begin{cases}
