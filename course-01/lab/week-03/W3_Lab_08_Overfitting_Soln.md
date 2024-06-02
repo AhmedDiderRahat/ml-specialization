@@ -1,8 +1,14 @@
 # Ungraded Lab:  Overfitting 
 
-<img align="left" src="./images/C1_W3_Overfitting_a.png"     style=" width:250px; padding: 10px; " >
-<img align="left" src="./images/C1_W3_Overfitting_b.png"     style=" width:250px; padding: 10px; " >
-<img align="left" src="./images/C1_W3_Overfitting_c.png"     style=" width:250px; padding: 10px; " >
+<img align="left" src="../../resources/images/C1_W3_Overfitting_a.png"     style=" width:250px; padding: 10px; " >
+<img align="left" src="../../resources/images/C1_W3_Overfitting_b.png"     style=" width:250px; padding: 10px; " >
+
+<img align="left" src="../../resources/images/C1_W3_Overfitting_c.png"     style=" width:250px; padding: 10px; " >
+
+<br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/><br/><br/>
 
 ## Goals
 In this lab, you will explore:
@@ -26,12 +32,9 @@ The week's lecture described situations where overfitting can arise. Run the cel
 plt.close("all")
 display(output)
 ofit = overfit_example(False)
+
 ```
-
-
     Output()
-
-
 
     Canvas(toolbar=Toolbar(toolitems=[('Home', 'Reset original view', 'home', 'home'), ('Back', 'Back to previous …
 
