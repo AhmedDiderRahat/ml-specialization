@@ -17,8 +17,9 @@ np.set_printoptions(precision=8)
 ```
 
 # Adding regularization
-<img align="Left" src="./images/C1_W3_LinearGradientRegularized.png"  style=" width:400px; padding: 10px; " >
-<img align="Center" src="./images/C1_W3_LogisticGradientRegularized.png"  style=" width:400px; padding: 10px; " >
+<img align="Left" src="../../resources/images/C1_W3_LinearGradientRegularized.png"  style=" width:400px; padding: 10px; " >
+
+<img align="Center" src="../../resources/images/C1_W3_LogisticGradientRegularized.png"  style=" width:400px; padding: 10px; " >
 
 The slides above show the cost and gradient functions for both linear and logistic regression. Note:
 - Cost
