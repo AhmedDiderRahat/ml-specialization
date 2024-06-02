@@ -43,7 +43,7 @@ plt.show()
 
 
 ## Logistic Gradient Descent
-<img align="right" src="./images/C1_W3_Logistic_gradient_descent.png"     style=" width:400px; padding: 10px; " >
+<img align="right" src="../../resources/images/C1_W3_Logistic_gradient_descent.png"     style=" width:400px; padding: 10px; " >
 
 Recall the gradient descent algorithm utilizes the gradient calculation:
 $$\begin{align*}
