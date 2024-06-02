@@ -5,11 +5,6 @@
 
 <img align="left" src="../../resources/images/C1_W3_Overfitting_c.png"     style=" width:250px; padding: 10px; " >
 
-<br/><br/><br/><br/><br/>
-<br/><br/><br/><br/><br/>
-<br/><br/><br/><br/><br/>
-<br/><br/><br/><br/><br/><br/><br/>
-
 ## Goals
 In this lab, you will explore:
 - the situations where overfitting can occur
