@@ -134,7 +134,7 @@ Before starting to implement any learning algorithm, it is always good to visual
 - The code below displays the data on a 2D plot (as shown below), where the axes are the two exam scores, and the positive and negative examples are shown with different markers.
 - We use a helper function in the ``utils.py`` file to generate this plot. 
 
-<img src="images/figure 1.png" width="450" height="450">
+<img src="../../resources/images/figure 1.png" width="400" height="300">
 
 
 
@@ -207,13 +207,10 @@ def sigmoid(z):
     
     return g
 ```
-
-<details>
-  <summary><font size="3" color="darkgreen"><b>Click for hints</b></font></summary>
        
    * `numpy` has a function called [`np.exp()`](https://numpy.org/doc/stable/reference/generated/numpy.exp.html), which offers a convinient way to calculate the exponential ( $e^{z}$) of all elements in the input array (`z`).
  
-<details>
+
           <summary><font size="2" color="darkblue"><b> Click for more hints</b></font></summary>
         
   - You can translate $e^{-z}$ into code as `np.exp(-z)` 
@@ -222,18 +219,11 @@ def sigmoid(z):
     
     If you're still stuck, you can check the hints presented below to figure out how to calculate `g` 
     
-    <details>
-          <summary><font size="2" color="darkblue"><b>Hint to calculate g</b></font></summary>
-        <code>g = 1 / (1 + np.exp(-z))</code>
-    </details>
-
-
-</details>
+    <code>g = 1 / (1 + np.exp(-z))</code>
 
 When you are finished, try testing a few values by calling `sigmoid(x)` in the cell below. 
 - For large positive values of x, the sigmoid should be close to 1, while for large negative values, the sigmoid should be close to 0. 
 - Evaluating `sigmoid(0)` should give you exactly 0.5. 
-
 
 
 ```python
@@ -353,9 +343,6 @@ def compute_cost(X, y, w, b, *argv):
     return total_cost
 ```
 
-<details>
-<summary><font size="3" color="darkgreen"><b>Click for hints</b></font></summary>
-    
 * You can represent a summation operator eg: $h = \sum\limits_{i = 0}^{m-1} 2i$ in code as follows:
 
 ```python
@@ -371,8 +358,6 @@ def compute_cost(X, y, w, b, *argv):
 
 * If you are new to Python, please check that your code is properly indented with consistent spaces or tabs. Otherwise, it might produce a different output or raise an `IndentationError: unexpected indent` error. You can refer to [this topic](https://community.deeplearning.ai/t/indentation-in-python-indentationerror-unexpected-indent/159398) in our community for details.
      
-<details>
-<summary><font size="2" color="darkblue"><b> Click for more hints</b></font></summary>
         
 * Here's how you can structure the overall implementation for this function
         
@@ -410,32 +395,23 @@ def compute_cost(X, y, w, b, *argv):
 
 If you're still stuck, you can check the hints presented below to figure out how to calculate `z_wb_ij`, `f_wb` and `cost`.
 
-<details>
-<summary><font size="2" color="darkblue"><b>Hint to calculate z_wb_ij</b></font></summary>
-           &emsp; &emsp; <code>z_wb_ij = w[j]*X[i][j] </code>
-</details>
-        
-<details>
-          <summary><font size="2" color="darkblue"><b>Hint to calculate f_wb</b></font></summary>
-           &emsp; &emsp; $f_{\mathbf{w},b}(\mathbf{x}^{(i)}) = g(z_{\mathbf{w},b}(\mathbf{x}^{(i)}))$ where $g$ is the sigmoid function. You can simply call the `sigmoid` function implemented above.
-          <details>
-              <summary><font size="2" color="blue"><b>&emsp; &emsp; More hints to calculate f</b></font></summary>
-               &emsp; &emsp; You can compute f_wb as <code>f_wb = sigmoid(z_wb) </code>
-           </details>
-</details>
 
-<details>
-          <summary><font size="2" color="darkblue"><b>Hint to calculate loss</b></font></summary>
-          &emsp; &emsp; You can use the <a href="https://numpy.org/doc/stable/reference/generated/numpy.log.html">np.log</a> function to calculate the log
-          <details>
-              <summary><font size="2" color="blue"><b>&emsp; &emsp; More hints to calculate loss</b></font></summary>
-              &emsp; &emsp; You can compute loss as <code>loss =  -y[i] * np.log(f_wb) - (1 - y[i]) * np.log(1 - f_wb)</code>
-</details>
-</details>
+<b>Hint to calculate z_wb_ij</b> &emsp;
+<code>z_wb_ij = w[j]*X[i][j] </code>
         
-</details>
+<b>Hint to calculate f_wb</b> &emsp; &emsp; 
+$f_{\mathbf{w},b}(\mathbf{x}^{(i)}) = g(z_{\mathbf{w},b}(\mathbf{x}^{(i)}))$
+where $g$ is the sigmoid function. You can simply call the `sigmoid` function implemented above.
+       
+<b> More hints to calculate f</b> &emsp;
+You can compute f_wb as <code>f_wb = sigmoid(z_wb) </code>
 
-</details>
+
+<b>Hint to calculate loss</b>
+&emsp; &emsp; You can use the <a href="https://numpy.org/doc/stable/reference/generated/numpy.log.html">np.log</a> function to calculate the log
+
+<b> More hints to calculate loss</b>&emsp;
+You can compute loss as <code> loss =  -y[i] * np.log(f_wb) - (1 - y[i]) * np.log(1 - f_wb)</code>
 
 Run the cells below to check your implementation of the `compute_cost` function with two different initializations of the parameters $w$ and $b$
 
@@ -476,7 +452,7 @@ compute_cost_test(compute_cost)
 ```
 
     Cost at test w and b (non-zeros): 0.218
-    [92mAll tests passed!
+    [92mAll tests passed!
 
 
 **Expected Output**:
@@ -488,6 +464,7 @@ compute_cost_test(compute_cost)
 </table>
 
 <a name="2.5"></a>
+
 ### 2.5 Gradient for logistic regression
 
 In this section, you will implement the gradient for logistic regression.
@@ -500,6 +477,8 @@ where, parameters $b$, $w_j$ are all updated simultaniously
 
 
 <a name='ex-03'></a>
+
+
 ### Exercise 3
 
 Please complete the `compute_gradient` function to compute $\frac{\partial J(\mathbf{w},b)}{\partial w}$, $\frac{\partial J(\mathbf{w},b)}{\partial b}$ from equations (2) and (3) below.
@@ -558,9 +537,7 @@ def compute_gradient(X, y, w, b, *argv):
     return dj_db, dj_dw
 ```
 
- <details>
-  <summary><font size="3" color="darkgreen"><b>Click for hints</b></font></summary>
-    
+<b>Click for hints</b>
     
 * Here's how you can structure the overall implementation for this function
     ```python 
@@ -597,55 +574,44 @@ def compute_gradient(X, y, w, b, *argv):
     * If you are new to Python, please check that your code is properly indented with consistent spaces or tabs. Otherwise, it might produce a different output or raise an `IndentationError: unexpected indent` error. You can refer to [this topic](https://community.deeplearning.ai/t/indentation-in-python-indentationerror-unexpected-indent/159398) in our community for details.
     * If you're still stuck, you can check the hints presented below to figure out how to calculate `f_wb`, `dj_db_i` and `dj_dw_ij` 
     
-    <details>
-          <summary><font size="2" color="darkblue"><b>Hint to calculate f_wb</b></font></summary>
-           &emsp; &emsp; Recall that you calculated f_wb in <code>compute_cost</code> above — for detailed hints on how to calculate each intermediate term, check out the hints section below that exercise
-           <details>
-              <summary><font size="2" color="blue"><b>&emsp; &emsp; More hints to calculate f_wb</b></font></summary>
-              &emsp; &emsp; You can calculate f_wb as
-               <pre>
-               for i in range(m):   
-                   # Calculate f_wb (exactly how you did it in the compute_cost function above)
-                   z_wb = 0
-                   # Loop over each feature
-                   for j in range(n): 
-                       # Add the corresponding term to z_wb
-                       z_wb_ij = X[i, j] * w[j]
-                       z_wb += z_wb_ij
-            
-                   # Add bias term 
-                   z_wb += b
-        
-                   # Calculate the prediction from the model
-                   f_wb = sigmoid(z_wb)
-    </details>
-        
-    </details>
-    <details>
-          <summary><font size="2" color="darkblue"><b>Hint to calculate dj_db_i</b></font></summary>
-           &emsp; &emsp; You can calculate dj_db_i as <code>dj_db_i = f_wb - y[i]</code>
-    </details>
-        
-    <details>
-          <summary><font size="2" color="darkblue"><b>Hint to calculate dj_dw_ij</b></font></summary>
-        &emsp; &emsp; You can calculate dj_dw_ij as <code>dj_dw_ij = (f_wb - y[i])* X[i][j]</code>
-    </details>
+    
+<b>Hint to calculate f_wb</b>&emsp; Recall that you calculated f_wb in <code> compute_cost </code> above — for detailed hints on how to calculate each intermediate term, check out the hints section below that exercise
+  
+  
+<b>&emsp; More hints to calculate f_wb</b>&emsp;
 
-</details>
+You can calculate f_wb as
+  <pre>
+  for i in range(m):   
+      # Calculate f_wb (exactly how you did it in the compute_cost function above)
+      z_wb = 0
+      # Loop over each feature
+      for j in range(n): 
+          # Add the corresponding term to z_wb
+          z_wb_ij = X[i, j] * w[j]
+          z_wb += z_wb_ij
+
+      # Add bias term 
+      z_wb += b
+
+      # Calculate the prediction from the model
+      f_wb = sigmoid(z_wb)
+
+<b>Hint to calculate dj_db_i</b>&emsp; You can calculate dj_db_i as <code>dj_db_i = f_wb - y[i]</code>
+        
+<b>Hint to calculate dj_dw_ij</b>&emsp;You can calculate dj_dw_ij as <code> dj_dw_ij = (f_wb - y[i])* X[i][j]</code>
 
 Run the cells below to check your implementation of the `compute_gradient` function with two different initializations of the parameters $w$ and $b$
-
-
+  
 ```python
-# Compute and display gradient with w and b initialized to zeros
-initial_w = np.zeros(n)
-initial_b = 0.
+  # Compute and display gradient with w and b initialized to zeros
+  initial_w = np.zeros(n)
+  initial_b = 0.
 
-dj_db, dj_dw = compute_gradient(X_train, y_train, initial_w, initial_b)
-print(f'dj_db at initial w and b (zeros):{dj_db}' )
-print(f'dj_dw at initial w and b (zeros):{dj_dw.tolist()}' )
+  dj_db, dj_dw = compute_gradient(X_train, y_train, initial_w, initial_b)
+  print(f'dj_db at initial w and b (zeros):{dj_db}' )
+  print(f'dj_dw at initial w and b (zeros):{dj_dw.tolist()}' )
 ```
-
     dj_db at initial w and b (zeros):-0.1
     dj_dw at initial w and b (zeros):[-12.00921658929115, -11.262842205513591]
 
@@ -678,7 +644,7 @@ compute_gradient_test(compute_gradient)
 
     dj_db at test w and b: -0.5999999999991071
     dj_dw at test w and b: [-44.831353617873795, -44.37384124953978]
-    [92mAll tests passed!
+    [92mAll tests passed!
 
 
 **Expected Output**:
@@ -694,6 +660,9 @@ compute_gradient_test(compute_gradient)
 </table>
 
 <a name="2.6"></a>
+
+</pre>
+
 ### 2.6 Learning parameters using gradient descent 
 
 Similar to the previous assignment, you will now find the optimal parameters of a logistic regression model by using gradient descent. 
@@ -790,10 +759,8 @@ w,b, J_history,_ = gradient_descent(X_train ,y_train, initial_w, initial_b,
     Iteration 9999: Cost     0.30   
 
 
-<details>
-<summary>
-    <b>Expected Output: Cost     0.30, (Click to see details):</b>
-</summary>
+  <b>Expected Output: Cost     0.30, (Click to see details):</b>
+
 
     # With the following settings
     np.random.seed(1)
@@ -818,10 +785,12 @@ Iteration 9999: Cost     0.30
 ```
 
 <a name="2.7"></a>
+
+
 ### 2.7 Plotting the decision boundary
 
 We will now use the final parameters from gradient descent to plot the linear fit. If you implemented the previous parts correctly, you should see a plot similar to the following plot:   
-<img src="images/figure 2.png"  width="450" height="450">
+<img src="../../resources/images/figure 2.png"  width="450" height="350">
 
 We will use a helper function in the `utils.py` file to create this plot.
 
@@ -836,7 +805,6 @@ plt.legend(loc="upper right")
 plt.show()
 ```
 
-
 ![png](output_46_0.png)
 
 
@@ -849,6 +817,7 @@ You will implement the `predict` function below to do this.
 
 
 <a name='ex-04'></a>
+
 ### Exercise 4
 
 Please complete the `predict` function to produce `1` or `0` predictions given a dataset and a learned parameter vector $w$ and $b$.
@@ -907,11 +876,10 @@ def predict(X, w, b):
     return p
 ```
 
-<details>
-  <summary><font size="3" color="darkgreen"><b>Click for hints</b></font></summary>
-    
+<b>Click for hints</b>
     
 * Here's how you can structure the overall implementation for this function
+
     ```python 
        def predict(X, w, b): 
             # number of training examples
@@ -935,40 +903,31 @@ def predict(X, w, b):
   
     If you're still stuck, you can check the hints presented below to figure out how to calculate `f_wb` and `p[i]` 
     
-    <details>
-          <summary><font size="2" color="darkblue"><b>Hint to calculate f_wb</b></font></summary>
-           &emsp; &emsp; Recall that you calculated f_wb in <code>compute_cost</code> above — for detailed hints on how to calculate each intermediate term, check out the hints section below that exercise
-           <details>
-              <summary><font size="2" color="blue"><b>&emsp; &emsp; More hints to calculate f_wb</b></font></summary>
-              &emsp; &emsp; You can calculate f_wb as
-               <pre>
-               for i in range(m):   
-                   # Calculate f_wb (exactly how you did it in the compute_cost function above)
-                   z_wb = 0
-                   # Loop over each feature
-                   for j in range(n): 
-                       # Add the corresponding term to z_wb
-                       z_wb_ij = X[i, j] * w[j]
-                       z_wb += z_wb_ij
-            
-                   # Add bias term 
-                   z_wb += b
-        
-                   # Calculate the prediction from the model
-                   f_wb = sigmoid(z_wb)
-    </details>
-        
-    </details>
-    <details>
-          <summary><font size="2" color="darkblue"><b>Hint to calculate p[i]</b></font></summary>
-           &emsp; &emsp; As an example, if you'd like to say x = 1 if y is less than 3 and 0 otherwise, you can express it in code as <code>x = y < 3 </code>. Now do the same for p[i] = 1 if f_wb >= 0.5 and 0 otherwise. 
-           <details>
-              <summary><font size="2" color="blue"><b>&emsp; &emsp; More hints to calculate p[i]</b></font></summary>
-              &emsp; &emsp; You can compute p[i] as <code>p[i] = f_wb >= 0.5</code>
-          </details>
-    </details>
 
-</details>
+<b>Hint to calculate f_wb </b> &emsp; Recall that you calculated f_wb in <code> compute_cost </code> above — for detailed hints on how to calculate each intermediate term, check out the hints section below that exercise.
+
+<b>More hints to calculate f_wb</b> &emsp; You can calculate f_wb as
+
+```python 
+for i in range(m):   
+    # Calculate f_wb (exactly how you did it in the compute_cost function above)
+    z_wb = 0
+    # Loop over each feature
+    for j in range(n): 
+        # Add the corresponding term to z_wb
+        z_wb_ij = X[i, j] * w[j]
+        z_wb += z_wb_ij
+
+    # Add bias term 
+    z_wb += b
+
+    # Calculate the prediction from the model
+    f_wb = sigmoid(z_wb)
+```
+ <b>Hint to calculate p[i]</b> &emsp;As an example, if you'd like to say x = 1 if y is less than 3 and 0 otherwise, you can express it in code as <code> x = y < 3 </code>. Now do the same for p[i] = 1 if f_wb >= 0.5 and 0 otherwise. 
+
+<b>&emsp; More hints to calculate p[i]</b> 
+You can compute p[i] as <code> p[i] = f_wb >= 0.5 </code>
 
 Once you have completed the function `predict`, let's run the code below to report the training accuracy of your classifier by computing the percentage of examples it got correct.
 
@@ -986,10 +945,8 @@ print(f'Output of predict: shape {tmp_p.shape}, value {tmp_p}')
 # UNIT TESTS        
 predict_test(predict)
 ```
-
     Output of predict: shape (4,), value [0. 1. 1. 1.]
-    [92mAll tests passed!
-
+    [92mAll tests passed!
 
 **Expected output** 
 
@@ -1019,11 +976,13 @@ print('Train Accuracy: %f'%(np.mean(p == y_train) * 100))
 </table>
 
 <a name="3"></a>
+
 ## 3 - Regularized Logistic Regression
 
 In this part of the exercise, you will implement regularized logistic regression to predict whether microchips from a fabrication plant passes quality assurance (QA). During QA, each microchip goes through various tests to ensure it is functioning correctly. 
 
 <a name="3.1"></a>
+
 ### 3.1 Problem Statement
 
 Suppose you are the product manager of the factory and you have the test results for some microchips on two different tests. 
@@ -1031,6 +990,7 @@ Suppose you are the product manager of the factory and you have the test results
 - To help you make the decision, you have a dataset of test results on past microchips, from which you can build a logistic regression model.
 
 <a name="3.2"></a>
+
 ### 3.2 Loading and visualizing the data
 
 Similar to previous parts of this exercise, let's start by loading the dataset for this task and visualizing it. 
@@ -1052,8 +1012,6 @@ X_train, y_train = load_data("data/ex2data2.txt")
 
 The code below prints the first five values of `X_train` and `y_train` and the type of the variables.
 
-
-
 ```python
 # print X_train
 print("X_train:", X_train[:5])
@@ -1063,7 +1021,6 @@ print("Type of X_train:",type(X_train))
 print("y_train:", y_train[:5])
 print("Type of y_train:",type(y_train))
 ```
-
     X_train: [[ 0.051267  0.69956 ]
      [-0.092742  0.68494 ]
      [-0.21371   0.69225 ]
@@ -1094,7 +1051,7 @@ print ('We have m = %d training examples' % (len(y_train)))
 
 The helper function `plot_data` (from `utils.py`) is used to generate a figure like Figure 3, where the axes are the two test scores, and the positive (y = 1, accepted) and negative (y = 0, rejected) examples are shown with different markers.
 
-<img src="images/figure 3.png"  width="450" height="450">
+<img src="../../resources/images/figure 3.png"  width="450" height="350">
 
 
 ```python
@@ -1117,6 +1074,7 @@ Figure 3 shows that our dataset cannot be separated into positive and negative e
 
 
 <a name="3.3"></a>
+
 ### 3.3 Feature mapping
 
 One way to fit the data better is to create more features from each data point. In the provided function `map_feature`, we will map the features into all polynomial terms of $x_1$ and $x_2$ up to the sixth power.
@@ -1171,6 +1129,7 @@ print("mapped X_train[0]:", mapped_X[0])
 While the feature mapping allows us to build a more expressive classifier, it is also more susceptible to overfitting. In the next parts of the exercise, you will implement regularized logistic regression to fit the data and also see for yourself how regularization can help combat the overfitting problem.
 
 <a name="3.4"></a>
+
 ### 3.4 Cost function for regularized logistic regression
 
 In this part, you will implement the cost function for regularized logistic regression.
@@ -1186,6 +1145,7 @@ The difference is the regularization term, which is $$\frac{\lambda}{2m}  \sum_{
 Note that the $b$ parameter is not regularized.
 
 <a name='ex-05'></a>
+
 ### Exercise 5
 
 Please complete the `compute_cost_reg` function below to calculate the following term for each element in $w$ 
@@ -1235,47 +1195,37 @@ def compute_cost_reg(X, y, w, b, lambda_ = 1):
     return total_cost
 ```
 
-<details>
-  <summary><font size="3" color="darkgreen"><b>Click for hints</b></font></summary>
-    
+<b>Click for hints</b>
     
 * Here's how you can structure the overall implementation for this function
-    ```python 
-       def compute_cost_reg(X, y, w, b, lambda_ = 1):
-   
-           m, n = X.shape
-    
-            # Calls the compute_cost function that you implemented above
-            cost_without_reg = compute_cost(X, y, w, b) 
-    
-            # You need to calculate this value
-            reg_cost = 0.
-    
-            ### START CODE HERE ###
-            for j in range(n):
-                reg_cost_j = # Your code here to calculate the cost from w[j]
-                reg_cost = reg_cost + reg_cost_j
-            reg_cost = (lambda_/(2 * m)) * reg_cost
-            ### END CODE HERE ### 
-    
-            # Add the regularization cost to get the total cost
-            total_cost = cost_without_reg + reg_cost
 
-        return total_cost
-    ```
+  ```python 
+      def compute_cost_reg(X, y, w, b, lambda_ = 1):
+  
+          m, n = X.shape
+  
+          # Calls the compute_cost function that you implemented above
+          cost_without_reg = compute_cost(X, y, w, b) 
+  
+          # You need to calculate this value
+          reg_cost = 0.
+  
+          ### START CODE HERE ###
+          for j in range(n):
+              reg_cost_j = # Your code here to calculate the cost from w[j]
+              reg_cost = reg_cost + reg_cost_j
+          reg_cost = (lambda_/(2 * m)) * reg_cost
+          ### END CODE HERE ### 
+  
+          # Add the regularization cost to get the total cost
+          total_cost = cost_without_reg + reg_cost
+
+      return total_cost
+  ```
   
     If you're still stuck, you can check the hints presented below to figure out how to calculate `reg_cost_j` 
     
-    <details>
-          <summary><font size="2" color="darkblue"><b>Hint to calculate reg_cost_j</b></font></summary>
-           &emsp; &emsp; You can use calculate reg_cost_j as <code>reg_cost_j = w[j]**2 </code> 
-    </details>
-        
-    </details>
-
-</details>
-
-    
+<b>Hint to calculate reg_cost_j</b> You can use calculate reg_cost_j as <code> reg_cost_j = w[j]**2 </code> 
 
 Run the cell below to check your implementation of the `compute_cost_reg` function.
 
@@ -1307,10 +1257,10 @@ compute_cost_reg_test(compute_cost_reg)
 </table>
 
 <a name="3.5"></a>
+
 ### 3.5 Gradient for regularized logistic regression
 
 In this section, you will implement the gradient for regularized logistic regression.
-
 
 The gradient of the regularized cost function has two components. The first, $\frac{\partial J(\mathbf{w},b)}{\partial b}$ is a scalar, the other is a vector with the same shape as the parameters $\mathbf{w}$, where the $j^\mathrm{th}$ element is defined as follows:
 
@@ -1330,10 +1280,8 @@ $$
 As you can see,$\frac{\partial J(\mathbf{w},b)}{\partial b}$ is the same, the difference is the following term in $\frac{\partial J(\mathbf{w},b)}{\partial w}$, which is $$\frac{\lambda}{m} w_j  \quad\, \mbox{for $j=0...(n-1)$}$$ 
 
 
-
-
-
 <a name='ex-06'></a>
+
 ### Exercise 6
 
 Please complete the `compute_gradient_reg` function below to modify the code below to calculate the following term
@@ -1376,11 +1324,10 @@ def compute_gradient_reg(X, y, w, b, lambda_ = 1):
     return dj_db, dj_dw
 ```
 
-<details>
-  <summary><font size="3" color="darkgreen"><b>Click for hints</b></font></summary>
-    
+<b>Click for hints</b>
     
 * Here's how you can structure the overall implementation for this function
+
     ```python 
     def compute_gradient_reg(X, y, w, b, lambda_ = 1): 
         m, n = X.shape
@@ -1403,17 +1350,7 @@ def compute_gradient_reg(X, y, w, b, lambda_ = 1):
   
     If you're still stuck, you can check the hints presented below to figure out how to calculate `dj_dw_j_reg` 
     
-    <details>
-          <summary><font size="2" color="darkblue"><b>Hint to calculate dj_dw_j_reg</b></font></summary>
-           &emsp; &emsp; You can use calculate dj_dw_j_reg as <code>dj_dw_j_reg = (lambda_ / m) * w[j] </code> 
-    </details>
-        
-    </details>
-
-</details>
-
-    
-
+<b>Hint to calculate dj_dw_j_reg</b> &emsp;You can use calculate dj_dw_j_reg as <code>dj_dw_j_reg = (lambda_ / m) * w[j] </code> 
 
 Run the cell below to check your implementation of the `compute_gradient_reg` function.
 
@@ -1452,6 +1389,7 @@ compute_gradient_reg_test(compute_gradient_reg)
 </table>
 
 <a name="3.6"></a>
+
 ### 3.6 Learning parameters using gradient descent
 
 Similar to the previous parts, you will use your gradient descent function implemented above to learn the optimal parameters $w$,$b$. 
@@ -1493,11 +1431,8 @@ w,b, J_history,_ = gradient_descent(X_mapped, y_train, initial_w, initial_b,
     Iteration 9000: Cost     0.45   
     Iteration 9999: Cost     0.45   
 
+    Expected Output: Cost < 0.5  (Click for details)
 
-<details>
-<summary>
-    <b>Expected Output: Cost < 0.5  (Click for details)</b>
-</summary>
 
 ```
 # Using the following settings
@@ -1522,6 +1457,7 @@ Iteration 9999: Cost     0.45
 ```
 
 <a name="3.7"></a>
+
 ### 3.7 Plotting the decision boundary
 To help you visualize the model learned by this classifier, we will use our `plot_decision_boundary` function which plots the (non-linear) decision boundary that separates the positive and negative examples. 
 
@@ -1529,7 +1465,7 @@ To help you visualize the model learned by this classifier, we will use our `plo
 
 - After learning the parameters $w$,$b$, the next step is to plot a decision boundary similar to Figure 4.
 
-<img src="images/figure 4.png"  width="450" height="450">
+<img src="../../resources/images/figure 4.png"  width="450" height="350">
 
 
 ```python
@@ -1547,6 +1483,7 @@ plt.show()
 
 
 <a name="3.8"></a>
+
 ### 3.8 Evaluating regularized logistic regression model
 
 You will use the `predict` function that you implemented above to calculate the accuracy of the regularized logistic regression model on the training set
@@ -1558,7 +1495,6 @@ p = predict(X_mapped, w, b)
 
 print('Train Accuracy: %f'%(np.mean(p == y_train) * 100))
 ```
-
     Train Accuracy: 82.203390
 
 
@@ -1569,22 +1505,3 @@ print('Train Accuracy: %f'%(np.mean(p == y_train) * 100))
 </table>
 
 **Congratulations on completing the final lab of this course! We hope to see you in Course 2 where you will use more advanced learning algorithms such as neural networks and decision trees. Keep learning!**
-
-<details>
-  <summary><font size="2" color="darkgreen"><b>Please click here if you want to experiment with any of the non-graded code.</b></font></summary>
-    <p><i><b>Important Note: Please only do this when you've already passed the assignment to avoid problems with the autograder.</b></i>
-    <ol>
-        <li> On the notebook’s menu, click “View” > “Cell Toolbar” > “Edit Metadata”</li>
-        <li> Hit the “Edit Metadata” button next to the code cell which you want to lock/unlock</li>
-        <li> Set the attribute value for “editable” to:
-            <ul>
-                <li> “true” if you want to unlock it </li>
-                <li> “false” if you want to lock it </li>
-            </ul>
-        </li>
-        <li> On the notebook’s menu, click “View” > “Cell Toolbar” > “None” </li>
-    </ol>
-    <p> Here's a short demo of how to do the steps above: 
-        <br>
-        <img src="https://lh3.google.com/u/0/d/14Xy_Mb17CZVgzVAgq7NCjMVBvSae3xO1" align="center" alt="unlock_cells.gif">
-</details>
